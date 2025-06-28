@@ -1,20 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 :root {
-    --cor-destaque: #4F46E5;
-    --gradiente-fundo: linear-gradient(113deg, #1B1B2F 0%, #1F1D3B 50%, #202040 100%);
-    --cor-fundo-claro: #F4F4F4;
+    --cor-destaque: linear-gradient(90deg, #0A472E 0%, #2C8C4B 100%);  /* Verde escuro ao verde médio */
+    --cor-destaque2: linear-gradient(90deg, #2C8C4B 0%, #0A472E 100%);  /* Verde escuro ao verde médio */
+    --gradiente-fundo: linear-gradient(120deg, #061E10, #0A472E, #2C8C4B);  /* Fundo suave e escuro */
+    --cor-fundo-claro: linear-gradient(135deg, #FFFFFF 0%, #F0F0F0 100%);  /* Branco suave */
     --cor-texto-claro: #FFFFFF;
-    --cor-placeholder: #A0A0B2;
-    --cor-botao-hover: #3C3AC9;
+    --cor-placeholder: #A0A6A0;
+    --cor-botao-hover: linear-gradient(90deg, #2C8C4B 0%, #0A472E 100%);
 }
+
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Calibre', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 
 body {
     height: 100vh;
@@ -45,6 +52,32 @@ h1 {
     color: var(--cor-destaque);
     margin-bottom: 30px;
 }
+.wave-text {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.15rem;
+    font-family: 'Calibre', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #2ecc71;
+}
+
+.wave-text span {
+    display: inline-block;
+    animation: wave 2.5s cubic-bezier(0.9, 0, 0.2, 1) infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: scale(1);
+        color: #2ecc71;
+    }
+    50% {
+        transform: scale(1.7);
+        color: #27ae60;
+    }
+}
 
 #entrada-de-texto {
     width: 100%;
@@ -67,7 +100,7 @@ h1 {
     padding: 1.25rem;
     border: none;
     border-radius: 0.5rem;
-    background: var(--cor-destaque);
+    background: var(--cor-destaque2);
     color: var(--cor-texto-claro);
     font-size: 2.5rem;
     font-weight: 500;
