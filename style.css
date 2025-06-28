@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 :root {
-    --cor-destaque: #ED145B;
-    --gradiente-fundo: linear-gradient(113deg, #000 0%, #1E2021 45%, #1E2022 100%);
-    --cor-branco: #FFF;
-    --cor-placeholder: #828282;
+    --cor-destaque: #4F46E5;
+    --gradiente-fundo: linear-gradient(113deg, #1B1B2F 0%, #1F1D3B 50%, #202040 100%);
+    --cor-fundo-claro: #F4F4F4;
+    --cor-texto-claro: #FFFFFF;
+    --cor-placeholder: #A0A0B2;
+    --cor-botao-hover: #3C3AC9;
 }
 
 * {
@@ -22,6 +24,7 @@ body {
     align-items: center;
     padding: 16px 21px;
     background: var(--gradiente-fundo);
+    color: var(--cor-texto-claro);
 }
 
 .container {
@@ -48,9 +51,10 @@ h1 {
     height: 12rem;
     padding: 1.4rem 2.5rem;
     border-radius: 0.625rem;
-    background: var(--cor-branco);
+    background: var(--cor-fundo-claro);
     font-size: 2rem;
     resize: vertical;
+    color: #111;
 }
 
 #entrada-de-texto::placeholder {
@@ -64,7 +68,7 @@ h1 {
     border: none;
     border-radius: 0.5rem;
     background: var(--cor-destaque);
-    color: #000;
+    color: var(--cor-texto-claro);
     font-size: 2.5rem;
     font-weight: 500;
     cursor: pointer;
@@ -72,7 +76,7 @@ h1 {
 }
 
 #botao-palavrachave:hover {
-    background-color: #c90e4a;
+    background-color: var(--cor-botao-hover);
 }
 
 #resultado-palavrachave {
@@ -81,7 +85,7 @@ h1 {
     padding: 1.25rem;
     margin-bottom: 2rem;
     border-radius: 0.625rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
     color: var(--cor-destaque);
     font-size: 2.5rem;
     text-align: center;
