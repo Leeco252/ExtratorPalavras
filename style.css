@@ -1,81 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 :root {
     --cor-destaque: #ED145B;
-    --cor-gradiente-preto: linear-gradient(113deg, #000 0%, #1E2021 44.96%, #1E2022 100%);
+    --gradiente-fundo: linear-gradient(113deg, #000 0%, #1E2021 45%, #1E2022 100%);
+    --cor-branco: #FFF;
+    --cor-placeholder: #828282;
 }
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 16px 21px 18px 21px;
-    background: var(--cor-gradiente-preto);
-    height: 100vh;
-    flex-direction: column;
+    padding: 16px 21px;
+    background: var(--gradiente-fundo);
 }
 
 .container {
     display: flex;
-    width: 65rem;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    overflow: hidden;
+    width: 65rem;
     padding: 20px;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
 h1 {
-    color: var(--cor-destaque);
-    text-align: center;
     font-size: 2.8rem;
     font-weight: 600;
     text-transform: uppercase;
+    text-align: center;
+    color: var(--cor-destaque);
     margin-bottom: 30px;
 }
 
 #entrada-de-texto {
-    display: flex;
+    width: 100%;
     height: 12rem;
-    padding: 1.4rem 2.5rem 2.5rem 2.5rem;
-    align-items: flex-start;
-    gap: 0.625rem;
-    align-self: stretch;
+    padding: 1.4rem 2.5rem;
     border-radius: 0.625rem;
-    background: #FFF;
+    background: var(--cor-branco);
     font-size: 2rem;
     resize: vertical;
-    box-sizing: border-box;
-    width: 100%;
 }
 
 #entrada-de-texto::placeholder {
-    color: #828282;
+    color: var(--cor-placeholder);
     font-size: 2rem;
     font-weight: 400;
-    line-height: normal;
 }
 
 #botao-palavrachave {
-    display: flex;
     padding: 1.25rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.625rem;
-    border-radius: 0.5rem;
     border: none;
+    border-radius: 0.5rem;
     background: var(--cor-destaque);
     color: #000;
     font-size: 2.5rem;
     font-weight: 500;
-    line-height: normal;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -85,22 +76,21 @@ h1 {
 }
 
 #resultado-palavrachave {
-    display: flex;
+    width: 100%;
+    max-height: 50vh;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
     border-radius: 0.625rem;
-    align-self: stretch;
+    background: rgba(255, 255, 255, 0.1);
     color: var(--cor-destaque);
     font-size: 2.5rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-    max-width: 100%;
-    max-height: 50vh;
+    text-align: center;
     overflow: auto;
-    padding: 1.25rem;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.1);
-    word-wrap: break-word;
     white-space: pre-wrap;
+    word-wrap: break-word;
 }
+
+/* RESPONSIVO */
 
 @media (max-width: 1024px) {
     .container {
